@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,14 +30,14 @@ public class FieldController {
         return new ApiResponse<>(true, HttpStatus.OK, "Fields create successfully",null);
     }
 
-    @GetMapping("/culture")
-    public ApiResponse<List<FieldDto>> getByCulture(@RequestBody PlantCulture culture){
+    @GetMapping("/culture/{culture}")
+    public ApiResponse<List<FieldDto>> getByCulture(@PathVariable PlantCulture culture){
         List<FieldDto> fieldDtos = fieldService.getByCulture(culture);
         return new ApiResponse<>(true, HttpStatus.OK, "Fields get successfully", fieldDtos);
     }
 
-    @GetMapping("/id")
-    public ApiResponse<FieldDto> getById(@RequestBody String id){
+    @GetMapping("/id/{id}")
+    public ApiResponse<FieldDto> getById(@PathVariable String id){
         FieldDto fieldDtos = fieldService.getById(id);
         return new ApiResponse<>(true, HttpStatus.OK, "Fields get successfully", fieldDtos);
     }
