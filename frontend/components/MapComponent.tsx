@@ -1,11 +1,12 @@
 'use client';
 
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as turf from '@turf/turf';
 import osmtogeojson from 'osmtogeojson';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import LandInfoModal from './LandInfoModal';
 
 const crops = [
   "Пшениця", "Кукурудза", "Соняшник",
@@ -17,10 +18,12 @@ function getRandomCrop() {
   return crops[Math.floor(Math.random() * crops.length)];
 }
 
-function FarmlandsLayer() {
+function FarmlandsLayer({ onSelectPlot }: { onSelectPlot: (area: string, crop: string) => void }) {
   const map = useMap();
 
   useEffect(() => {
+    if (!map) return;
+  
     async function fetchFarmlands() {
       const query = `
         [out:json][timeout:25];
@@ -31,6 +34,7 @@ function FarmlandsLayer() {
         >;
         out skel qt;
       `;
+      map.zoomControl.remove();
 
       try {
         const response = await fetch('https://overpass-api.de/api/interpreter', {
@@ -40,10 +44,10 @@ function FarmlandsLayer() {
           },
           body: 'data=' + encodeURIComponent(query)
         });
-
+  
         const osmData = await response.json();
         const geojson = osmtogeojson(osmData);
-
+  
         const layer = L.geoJSON(geojson, {
           style: {
             color: 'green',
@@ -58,45 +62,55 @@ function FarmlandsLayer() {
             }
             const areaHa = (area / 10000).toFixed(2);
             const crop = getRandomCrop();
-
-            layer.bindPopup(`
-              <b>Тип землі:</b> farmland<br>
-              <b>Площа:</b> ${areaHa} га<br>
-              <b>Культура:</b> ${crop}
-            `);
-
+  
             layer.bindTooltip(`
               Площа: ${areaHa} га<br>Культура: ${crop}
             `, { sticky: true });
+
+            layer.on('click', () => {
+              onSelectPlot(areaHa, crop);
+            });
           }
         });
-
+  
         layer.addTo(map);
-
+  
       } catch (error) {
         console.error('Помилка завантаження ділянок:', error);
       }
     }
-
+  
     fetchFarmlands();
-  }, [map]);
+  }, [map, onSelectPlot]);
 
   return null;
 }
 
 export default function MapComponent() {
+  const [selectedPlot, setSelectedPlot] = useState<null | { area: string; crop: string }>(null);
+
   const bounds = L.latLngBounds(
     [49.75, 24],
     [49.95, 24.25]
   );
 
   return (
-    <MapContainer bounds={bounds} style={{ height: '100vh', width: '100vw' }}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; OpenStreetMap contributors'
-      />
-      <FarmlandsLayer />
-    </MapContainer>
+    <>
+      <MapContainer className="absolute inset-0 z-0"  bounds={bounds} style={{ height: '100vh', width: '100vw' }}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; OpenStreetMap contributors'
+        />
+        <FarmlandsLayer onSelectPlot={(area, crop) => setSelectedPlot({ area, crop })} />
+      </MapContainer>
+
+      {selectedPlot && (
+        <LandInfoModal
+          area={selectedPlot.area}
+          crop={selectedPlot.crop}
+          onClose={() => setSelectedPlot(null)}
+        />
+      )}
+    </>
   );
 }
