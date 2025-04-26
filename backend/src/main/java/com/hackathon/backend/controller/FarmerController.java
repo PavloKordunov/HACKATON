@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
 import java.util.UUID;
 
 @RestController
@@ -27,9 +28,9 @@ public class FarmerController {
     private final FarmerService farmerService;
 
     @PostMapping("/new")
-    public ApiResponse<GenericResponse> createFarmer(@Valid @RequestBody FarmerDto dto){
-        UUID id = farmerService.createFarmer(dto);
-        return ApiResponse.apiResponse(true, 201, "Successful create farmer", id);
+    public ApiResponse<Map<String, Object>> createFarmer(@Valid @RequestBody FarmerDto dto){
+        Map<String, Object> jwt = farmerService.createFarmer(dto);
+        return new ApiResponse<>(true, HttpStatus.CREATED, "Successful create farmer", jwt);
     }
 
     @GetMapping("/id/{id}")
