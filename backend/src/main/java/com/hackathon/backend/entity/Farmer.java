@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,11 +25,20 @@ public class Farmer {
     @GeneratedValue
     private UUID id;
 
-    @Column(nullable = false)
+    @Column
     private String name;
+
+    @Column(nullable = false)
+    private String email;
+
+    @Column
+    private String password;
 
     @Column
     private Boolean isActive;
+
+    @Lob
+    private String image;
 
     @OneToMany(mappedBy = "farmer", orphanRemoval = true, cascade = CascadeType.ALL)
     private List<Field> field;

@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f80a112-45e3-49c8-a98d-0d056e527ae3" name="Changes" comment="init commit v1">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/config/DataRestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/controller/FieldController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/customEnum/PlantCulture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/dto/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/dto/FieldDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/dto/GenericResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/entity/Farmer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/entity/Field.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/entity/Investor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/repository/FieldRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/service/FieldService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/service/impl/FieldServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+    <list default="true" id="0f80a112-45e3-49c8-a98d-0d056e527ae3" name="Changes" comment="fix Field endpoints">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/controller/FarmerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/dto/FarmerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/service/FarmerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/service/impl/FarmerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/controller/FieldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/hackathon/backend/controller/FieldController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -95,10 +85,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.hackathon.backend.repository" />
-      <recent name="com.hackathon.backend.dto" />
       <recent name="com.hackathon.backend.service.impl" />
       <recent name="com.hackathon.backend.service" />
+      <recent name="com.hackathon.backend.repository" />
+      <recent name="com.hackathon.backend.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Антошка\Desktop\HACKATON" />
@@ -139,7 +129,7 @@
       <updated>1745665080604</updated>
       <workItem from="1745665081768" duration="3629000" />
       <workItem from="1745669022750" duration="284000" />
-      <workItem from="1745669315536" duration="3223000" />
+      <workItem from="1745669315536" duration="6136000" />
     </task>
     <task id="LOCAL-00001" summary="fix-v1">
       <option name="closed" value="true" />
@@ -157,15 +147,44 @@
       <option name="project" value="LOCAL" />
       <updated>1745666278916</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add Field, Farmer, Investor Entity &amp; implement Field logic">
+      <option name="closed" value="true" />
+      <created>1745675714535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745675714535</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix Field endpoints">
+      <option name="closed" value="true" />
+      <created>1745676161280</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745676161280</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix-v1" />
     <MESSAGE value="init commit v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit v1" />
+    <MESSAGE value="add Field, Farmer, Investor Entity &amp; implement Field logic" />
+    <MESSAGE value="fix Field endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Field endpoints" />
   </component>
 </project>

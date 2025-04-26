@@ -5,6 +5,7 @@ import com.hackathon.backend.dto.ApiResponse;
 import com.hackathon.backend.dto.FieldDto;
 import com.hackathon.backend.dto.GenericResponse;
 import com.hackathon.backend.service.FieldService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,7 +26,7 @@ public class FieldController {
     private final FieldService fieldService;
 
     @PostMapping("/create")
-    public ApiResponse<GenericResponse> createFields(@RequestBody List<FieldDto> fieldDtos){
+    public ApiResponse<GenericResponse> createFields(@RequestBody @Valid List<FieldDto> fieldDtos){
         fieldService.createFields(fieldDtos);
         return new ApiResponse<>(true, HttpStatus.OK, "Fields create successfully",null);
     }
