@@ -14,7 +14,7 @@
     </properties>
 
     <modules>
-        <module>frontend/pom.xml</module>
+<!--        <module>frontend/pom.xml</module>-->
         <module>backend/pom.xml</module>
     </modules>
 </project>

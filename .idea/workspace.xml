@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f80a112-45e3-49c8-a98d-0d056e527ae3" name="Changes" comment="change java 21 -&gt; 17">
-      <change afterPath="$PROJECT_DIR$/DockerFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0f80a112-45e3-49c8-a98d-0d056e527ae3" name="Changes" comment="change java 21 -&gt; 17" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +35,7 @@
     </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,7 +82,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.BackendApplication.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "be-deploy",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Антошка/Desktop/JavaProjects/BEST-HACKATON",
     "node.js.detected.package.eslint": "true",
@@ -159,7 +156,7 @@
       <workItem from="1745665081768" duration="3629000" />
       <workItem from="1745669022750" duration="284000" />
       <workItem from="1745669315536" duration="17997000" />
-      <workItem from="1745703775642" duration="5166000" />
+      <workItem from="1745703775642" duration="5483000" />
     </task>
     <task id="LOCAL-00001" summary="fix-v1">
       <option name="closed" value="true" />
@@ -233,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745706803158</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="change java 21 -&gt; 17">
+      <option name="closed" value="true" />
+      <created>1745709381486</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1745709381486</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
