@@ -9,6 +9,7 @@ public record InvestorDto(
         UUID id,
         String name,
         String email,
-        String image
+        String image,
+        String password
 ) {
 }
