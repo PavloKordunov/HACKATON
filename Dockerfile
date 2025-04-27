@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
 
 # Копіюємо JAR-файл
-COPY target/*.jar app.jar
+COPY target/backend-0.0.1-SNAPSHOT.jar app.jar
 
 # Вказуємо порт (Render використовує 10000)
 EXPOSE 10000
