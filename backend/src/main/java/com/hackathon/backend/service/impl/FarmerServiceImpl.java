@@ -66,6 +66,7 @@ public class FarmerServiceImpl implements FarmerService {
 
     public static FarmerDto mapToFarmerDto(Farmer farmer) {
         return FarmerDto.builder()
+                .id(farmer.getId())
                 .email(farmer.getEmail())
                 .image(farmer.getImage())
                 .name(farmer.getName())

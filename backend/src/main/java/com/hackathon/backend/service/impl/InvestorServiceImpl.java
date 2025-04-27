@@ -66,6 +66,7 @@ public class InvestorServiceImpl implements InvestorService {
 
     public static InvestorDto mapToInvestorDto(Investor investor) {
         return InvestorDto.builder()
+                .id(investor.getId())
                 .email(investor.getEmail())
                 .image(investor.getImage())
                 .name(investor.getName())

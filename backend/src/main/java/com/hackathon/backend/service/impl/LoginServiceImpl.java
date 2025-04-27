@@ -75,10 +75,10 @@ public class LoginServiceImpl implements LoginService {
 
     private Map<String, Object> getStringObjectMapInvestor(Investor investor) {
         String jwt = jwtService.generateToken(investor.getEmail(), investor.getName());
-        InvestorDto volunteerMapDto = mapToInvestorDto(investor);
+        InvestorDto investorDto = mapToInvestorDto(investor);
         Map<String, Object> map = new HashMap<>();
         map.put("token", jwt);
-        map.put("user", volunteerMapDto);
+        map.put("user", investorDto);
         return map;
     }
 
