@@ -3,10 +3,10 @@ spring:
     name: backend
 
   datasource:
-    url: jdbc:postgresql://postgres:ucKRvwoDYAtanCqRubeXjeqNUXGXBmvs@postgres.railway.internal:5432/railway
+    url: jdbc:postgresql://dpg-d06p819r0fns73fs2lbg-a.frankfurt-postgres.render.com:5432/hackaton_u8ka
     driver-class-name: org.postgresql.Driver
-    username: postgres
-    password: ucKRvwoDYAtanCqRubeXjeqNUXGXBmvs
+    username: hackaton_user
+    password: qRwXpuWOcRDNB0HCiJnGjNfHQFygcTeO
 
   jpa:
     hibernate:
