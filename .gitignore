@@ -1,15 +1,33 @@
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b.xml
-/.idea/httpRequests/2025-04-26T154040.400.json
-/.idea/httpRequests/2025-04-26T154105.200.json
-/.idea/dataSources.local.xml
-/.idea/httpRequests/http-client.cookies
-/.idea/httpRequests/http-requests-log.http
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b/storage_v2/_src_/database/postgres_spring_hackathon.ByUCrw/schema/information_schema.FNRwLQ.meta
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b/storage_v2/_src_/database/postgres_spring_hackathon.ByUCrw/schema/pg_catalog.0S1ZNQ.meta
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b/storage_v2/_src_/database/postgres.edMnLQ.meta
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b/storage_v2/_src_/database/postgres_spring_hackathon.ByUCrw.meta
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta
-/.idea/dataSources/24a7c78e-3bb0-4e67-94eb-30aa9ff1fc8b/storage_v2/_src_/database/postgres_spring_hackathon.ByUCrw/schema/public.abK9xQ.meta
-/.idea/vcs.xml
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
