@@ -7,6 +7,7 @@ import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import Image from "next/image";
+import { useUser } from "@/hooks/useUser";
 
 const NavBar = () => {
 
@@ -16,6 +17,8 @@ const NavBar = () => {
     const logOut = async() => {
         await signOut({ redirect: false })
     }
+
+    const {user} = useUser()
 
     return (
         <div className="w-full bg-[#fff] px-10 py-6 shadow-md flex items-center justify-between">
@@ -64,7 +67,7 @@ const NavBar = () => {
             </div>
 
             <div className="flex gap-4 шеуьі-сутеук">
-                <Link onClick={logOut} href={`/profile/investor/123`}>
+                <Link onClick={logOut} href={`/profile/investor/${user?.id}`} className="flex items-center gap-2">
                     <FaUserCircle size={46} color="#2F2929"  />  
                 </Link>
                 <Link href="/" >

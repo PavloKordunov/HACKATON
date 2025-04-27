@@ -5,9 +5,9 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { useState } from "react";
-// import { signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-// import { useUser } from "@/hooks/useUser";
+import { useUser } from "@/hooks/useUser";
 
 export default function LoginPage() {
 
@@ -17,7 +17,7 @@ export default function LoginPage() {
   })
 
   const router = useRouter()
-  // const {user, setUser} = useUser()
+  const {user, setUser} = useUser()
 
   const handleLogin = async() => {
     // try {
@@ -53,9 +53,6 @@ export default function LoginPage() {
 
       <div className="bg-[#FFFFFF] rounded-[32px] shadow-md w-full max-w-md py-12 px-10 text-center z-10">
         <h1 className="text-2xl md:text-3xl text-[#000] font-bold mb-8 flex items-center justify-center gap-2">
-          <svg className="w-6 h-6" fill="#000">
-            <use href={`/sprite.svg?v=1#icon-logo`}></use>
-          </svg>
           Log in to the platform
         </h1>
 
@@ -95,12 +92,12 @@ export default function LoginPage() {
 
         <div className="flex items-center gap-4 mt-8 justify-center">
           <button
-          //  onClick={() => signIn("google", { callbackUrl: "/home" })}
+           onClick={() => signIn("google", { callbackUrl: "/home" })}
            className="flex-1 flex items-center justify-center border-none gap-2 py-3 bg-white rounded-[12px] shadow-lg border hover:bg-gray-50 transition">
             <FcGoogle size={24} /> 
           </button>
           <button
-          //  onClick={() => signIn("google", { callbackUrl: "/home" })}
+           onClick={() => signIn("google", { callbackUrl: "/home" })}
            className="flex-1 flex items-center justify-center border-none gap-2 py-3 bg-white rounded-[12px] shadow-lg border hover:bg-gray-50 transition">
             <FaGithub size={24} color="black" /> 
           </button>
