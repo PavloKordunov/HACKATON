@@ -12,7 +12,6 @@ import { useUser } from "@/hooks/useUser";
 const NavBar = () => {
 
     const [active, setActive] = useState("home");
-    // const {user, setUser} = useUser()
 
     const logOut = async() => {
         await signOut({ redirect: false })
@@ -66,12 +65,18 @@ const NavBar = () => {
         
             </div>
 
-            <div className="flex gap-4 шеуьі-сутеук">
+            <div className="flex gap-4 items-center">
                 <Link onClick={logOut} href={`/profile/investor/${user?.id}`} className="flex items-center gap-2">
                     <FaUserCircle size={46} color="#2F2929"  />  
                 </Link>
+                <div className="flex gap-1 items-center">
+                    <p className="text-[20px] text-[#000] font-medium">48</p>
+                    <div className="w-8 h-8 relative">
+                        <Image src='/coin.png' alt="" fill className="object-contein" />    
+                    </div>
+                </div>
                 <Link href="/" >
-                    <div>
+                    <div onClick={logOut}>
                         <FiLogOut size={40} color="black" />
                     </div>
                 </Link>

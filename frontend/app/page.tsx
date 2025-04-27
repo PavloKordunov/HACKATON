@@ -1,8 +1,20 @@
+'use client';
+
 import Footer from "@/components/Footer";
+import { useUser } from "@/hooks/useUser";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Home() {
+
+  const { setUser } = useUser();
+
+  useEffect(() => {
+    localStorage.removeItem('user');
+    setUser(null); 
+  }, []);
+
   return (
     <div className="w-full h-fit">
       <div className="relative py-9 px-20 w-full h-[600px] overflow-hidden mb-15">
