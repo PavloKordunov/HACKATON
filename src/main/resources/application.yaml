@@ -3,7 +3,7 @@ spring:
     name: backend
 
   datasource:
-    url: postgresql://postgres:ucKRvwoDYAtanCqRubeXjeqNUXGXBmvs@postgres.railway.internal:5432/railway
+    url: jdbs:postgresql://postgres:ucKRvwoDYAtanCqRubeXjeqNUXGXBmvs@postgres.railway.internal:5432/railway
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: ucKRvwoDYAtanCqRubeXjeqNUXGXBmvs
