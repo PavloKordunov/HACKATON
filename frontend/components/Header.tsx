@@ -64,9 +64,9 @@ const NavBar = () => {
             </div>
 
             <div className="flex gap-4 шеуьі-сутеук">
-                {/* <Link onClick={logOut} href={user?.userType === "volunteer" ? `/profile/volunteer/${user?.id}` : `/profile/shelter/${user?.id}`}> */}
+                <Link onClick={logOut} href={`/profile/investor/123`}>
                     <FaUserCircle size={46} color="#2F2929"  />  
-                {/* </Link> */}
+                </Link>
                 <Link href="/" >
                     <div>
                         <FiLogOut size={40} color="black" />

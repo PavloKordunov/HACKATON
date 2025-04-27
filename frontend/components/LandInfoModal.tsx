@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface LandInfoModalProps {
   onClose: () => void;
@@ -27,12 +28,11 @@ export default function LandInfoModal({ onClose, area, crop }: LandInfoModalProp
               />
             </div>
             <div>
-              <p className="font-medium">Oleg Petrosyan</p>
+              <Link href={`/profile/farmer/123`} className="font-medium">Oleg Petrosyan</Link>
               <p className="text-gray-600">Lands in possession: 3</p>
             </div>
           </div>
 
-          {/* Land Plot Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Information about the land plot:</h3>
             <div className="text-gray-800 space-y-1 mb-6">
@@ -44,7 +44,6 @@ export default function LandInfoModal({ onClose, area, crop }: LandInfoModalProp
               <p><span className="font-semibold">What is sown:</span> {crop}</p>
             </div>
 
-            {/* Progress bar */}
             <div className="w-full bg-gray-200 rounded-full h-3 mb-3 overflow-hidden">
               <div className="bg-blue-500 h-3" style={{ width: "40%" }}></div>
             </div>

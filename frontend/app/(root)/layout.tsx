@@ -1,4 +1,5 @@
 'use client'
+
 import NavBar from "@/components/Header";
 // import { useUser } from "@/hooks/useUser";
 // import { useSession } from "next-auth/react";
@@ -33,11 +34,11 @@ export default function homeLayout({ children }: { children: ReactNode }) {
     return (
         <div className="w-full">
             <div className="relative">
-                <div className="fixed inset-x-0 z-1000">
+                <div className="fixed inset-x-0 z-1000 mb-30">
                     <NavBar />
                 </div>
             </div>
-            <div>{children}</div>
+            <div className="pt-6">{children}</div>
         </div>
     );
 }

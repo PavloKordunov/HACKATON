@@ -90,14 +90,7 @@ export default function TypePage() {
         </div>
       </div>
 
-      <div className="absolute left-0 bottom-20 hidden md:block transform translate-x-[-150px] translate-y-[40px]">
-        <Image src="/dogSide.png" alt="Dog" width={400} height={400} />
-     </div>
-     <div className="absolute right-0 top-20 hidden md:block transform translate-x-[150px] translate-y-[-40px]">
-        <Image src="/catSide.png" alt="Cat" width={400} height={400} />
-     </div>
-
-      <div className="bg-[#E1FFE1] rounded-[32px] shadow-md py-16 px-24 z-10">
+      <div className="bg-[#FFF] rounded-[32px] shadow-md py-16 px-24 z-10">
         <div className="flex-1 justify-center text-center mb-20">
             <p className="text-2xl text-[#000] md:text-3xl font-bold">Choose who you are:</p>
         </div>
@@ -116,7 +109,7 @@ export default function TypePage() {
                         <li className="text-[#6D4C00] text-[16px] font-bold mb-6">  •  Be part of a great movement to restore the economy</li>
                     </ul>
                     <div
-                        className="px-8 py-3 ml-10 rounded-[16px] bg-[#FFC107] text-center text-white font-semibold text-[16px] shadow-md hover:bg-[#e56d30] transition"
+                        className="px-8 py-3 rounded-[16px] bg-[#FFC107] text-center text-white font-semibold text-[16px] shadow-md hover:bg-[#e56d30] transition"
                         onClick={() => { 
                             setUserType("volunteer")
                             // handleChange()
@@ -174,68 +167,68 @@ export default function TypePage() {
         <div className="absolute inset-0 bg-[#E1FFE1] opacity-50 z-0"></div>
 
         <div 
-            className="relative bg-[#FF7A2F] rounded-2xl p-8 w-full max-w-md mx-auto text-white text-center space-y-5 shadow-lg z-10"
+            className="relative bg-[#FFFFFF] text-[#000] rounded-2xl p-8 w-full max-w-md mx-auto text-center space-y-5 shadow-lg z-10"
             onClick={(e) => e.stopPropagation()}
         >
-            <h2 className="text-xl font-bold">Розкажіть трохи про свій притулок 🐾</h2>
+            <h2 className="text-[26px] font-bold">Tell us about yourself</h2>
 
                 <div className="text-left">
-                    <label className="block mb-1">🏠 Назва притулку</label>
+                    <label className="block text-[20px] font-bold mb-1">First and last name</label>
                     <input
                     value={shelterData.name}
                     onChange={(e) => setShelterData((prev) => ({...prev, name: e.target.value}))}
                     type="text"
-                    className="w-full px-4 py-2 rounded-md bg-[#FCA27E] placeholder-white text-white outline-none"
+                    className="w-full px-4 py-2 rounded-md bg-[#e9e5e5] placeholder-white text-white outline-none"
                     placeholder=" "
                     />
                 </div>
 
                 <div className="text-left">
-                    <label className="block mb-1">🏙️ Місто</label>
+                    <label className="block text-[20px] font-bold mb-1">Place of residence</label>
                     <input
                     value={shelterData.city}
                     onChange={(e) => setShelterData((prev) => ({...prev, city: e.target.value}))}
                     type="text"
-                    className="w-full px-4 py-2 rounded-md bg-[#FCA27E] placeholder-white text-white outline-none"
+                    className="w-full px-4 py-2 rounded-md bg-[#e9e5e5] placeholder-white text-white outline-none"
                     placeholder=" "
                     />
                 </div>
 
                 <div className="text-left">
-                    <label className="block mb-1">📍 Адреса місця знаходження</label>
+                    <label className="block text-[20px] font-bold mb-1">Phone number</label>
                     <input
                     value={shelterData.location}
                     onChange={(e) => setShelterData((prev) => ({...prev, location: e.target.value}))}
                     type="text"
-                    className="w-full px-4 py-2 rounded-md bg-[#FCA27E] placeholder-white text-white outline-none"
+                    className="w-full px-4 py-2 rounded-md bg-[#e9e5e5] placeholder-white text-white outline-none"
                     placeholder=" "
                     />
                 </div>
 
                 <div className="text-left">
-                    <label className="block mb-1">🐶 Вид притулку</label>
+                    <label className="block text-[20px] font-bold mb-1">Identification code (RNOKPP)</label>
                     <input
                     value={shelterData.shelterType}
                     onChange={(e) => setShelterData((prev) => ({...prev, shelterType: e.target.value}))}    
                     type="text"
-                    className="w-full px-4 py-2 rounded-md bg-[#FCA27E] placeholder-white text-white outline-none"
+                    className="w-full px-4 py-2 rounded-md bg-[#e9e5e5] placeholder-white text-white outline-none"
                     placeholder=" "
                     />
                 </div>
 
                 <div className="text-left">
-                    <label className="block mb-1">📞 Контактний номер телефону</label>
+                    <label className="block text-[20px] font-bold mb-1">Сadastral plot number</label>
                     <input
                     value={shelterData.telephoneNumber}
                     onChange={(e) => setShelterData((prev) => ({...prev, telephoneNumber: e.target.value}))}         
                     type="tel"
-                    className="w-full px-4 py-2 rounded-md bg-[#FCA27E] placeholder-white text-white outline-none"
+                    className="w-full px-4 py-2 rounded-md bg-[#e9e5e5] placeholder-white text-white outline-none"
                     placeholder=" "
                     />
                 </div>
 
-                <Link onClick={createShelter} href='/login' className="px-8 py-3 rounded-[16px] bg-[#F68C6B] text-white font-semibold text-[16px] shadow-md hover:bg-[#e56d30] transition">
-                    Завершити реєстрацію
+                <Link onClick={createShelter} href='/login' className="px-8 py-3 rounded-[16px] bg-[#1565C0] text-white font-semibold text-[16px] shadow-md hover:bg-[#e56d30] transition">
+                Сomplete registration
                 </Link>
             </div>
         </div>)}
@@ -248,79 +241,47 @@ export default function TypePage() {
     <div className="absolute inset-0 bg-[#E1FFE1] opacity-50 z-0"></div>
 
     <div 
-      className="relative bg-[#E39B9B] rounded-2xl p-8 w-full max-w-md mx-auto text-white text-center shadow-lg border border-blue-300 z-10"
+      className="relative bg-[#FFF] rounded-2xl p-8 w-full max-w-md mx-auto text-black text-center shadow-lg border border-blue-300 z-10"
       onClick={(e) => e.stopPropagation()}
     >
       {/* Volunteer form content */}
-      <h2 className="text-xl font-bold mb-4">Розкажіть про себе 🙌</h2>
+      <h2 className="text-[26px] font-bold mb-4">Tell us about yourself</h2>
 
       <div className="text-left mb-4">
-        <label className="block mb-1">🧑‍💼 Ім’я та прізвище</label>
+        <label className="block text-[20px] font-bold mb-1">First and last name</label>
         <input
           value={volunteerData.name}
           onChange={(e) => setVolunteerData((prev) => ({...prev, name: e.target.value}))}
           type="text"
-          className="w-full px-4 py-2 rounded-md bg-[#F3BEBE] placeholder-white text-white outline-none"
+          className="w-full px-4 py-2 rounded-md bg-[#e9e5e5] placeholder-white text-white outline-none"
           placeholder=" "
         />
       </div>
 
       <div className="text-left mb-4">
-        <label className="block mb-1">🏙️ Місто проживання</label>
+        <label className="block text-[20px] font-bold mb-1">Place of residence</label>
         <input
           value={volunteerData.superscription}
           onChange={(e) => setVolunteerData((prev) => ({...prev, superscription: e.target.value}))}
           type="text"
-          className="w-full px-4 py-2 rounded-md bg-[#F3BEBE] placeholder-white text-white outline-none"
+          className="w-full px-4 py-2 rounded-md bg-[#e9e5e5] placeholder-white text-white outline-none"
           placeholder=" "
         />
       </div>
 
       <div className="text-left mb-4">
-        <label className="block mb-1">📞 Номер телефону</label>
+        <label className="block text-[20px] font-bold mb-1">Phone number</label>
         <input
           value={volunteerData.telephoneNumber}
           onChange={(e) => setVolunteerData((prev) => ({...prev, telephoneNumber: e.target.value}))}
           type="tel"
-          className="w-full px-4 py-2 rounded-md bg-[#F3BEBE] placeholder-white text-white outline-none"
+          className="w-full px-4 py-2 rounded-md bg-[#e9e5e5] placeholder-white text-white outline-none"
           placeholder=" "
         />
       </div>
 
-      <div className="text-left mb-4">
-        <p className="mb-2">🐶 Я хочу допомагати з:</p>
-        <div className="grid grid-cols-2 gap-2 text-sm">
-          {/* Your checkboxes */}
-          <label className="flex items-center space-x-2">
-            <input type="checkbox" className="form-checkbox text-orange-500" />
-            <span>Доглядом за тваринами</span>
-          </label>
-          <label className="flex items-center space-x-2">
-            <input type="checkbox" className="form-checkbox text-orange-500" />
-            <span>Перевезенням</span>
-          </label>
-          <label className="flex items-center space-x-2">
-            <input type="checkbox" className="form-checkbox text-orange-500" />
-            <span>Пошуком нових домівок</span>
-          </label>
-          <label className="flex items-center space-x-2">
-            <input type="checkbox" className="form-checkbox text-orange-500" />
-            <span>Фото / соцмережі</span>
-          </label>
-        </div>
-      </div>
-
-      <div className="text-left mb-6">
-        <label className="block mb-1">Інше:</label>
-        <input
-          type="text"
-          className="w-full px-4 py-2 rounded-md bg-[#F3BEBE] placeholder-white text-white outline-none"
-          placeholder=" "
-        />
-      </div>
-
-      <Link href='/login' onClick={createVolunteer} className="px-8 py-3 rounded-[16px] bg-[#F68C6B] text-white font-semibold text-[16px] shadow-md hover:bg-[#e56d30] transition">
-        Завершити реєстрацію
+      <Link href='/login' onClick={createVolunteer} className="px-8 py-3 rounded-[16px] bg-[#1565C0] text-white font-semibold text-[16px] shadow-md hover:bg-[#e56d30] transition">
+      Сomplete registration
       </Link>
     </div>
   </div>

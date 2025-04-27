@@ -51,7 +51,7 @@ export default function LoginPage() {
         </div>
       </div>
 
-      <div className="bg-[#E1FFE1] rounded-[32px] shadow-md w-full max-w-md py-12 px-10 text-center z-10">
+      <div className="bg-[#FFFFFF] rounded-[32px] shadow-md w-full max-w-md py-12 px-10 text-center z-10">
         <h1 className="text-2xl md:text-3xl text-[#000] font-bold mb-8 flex items-center justify-center gap-2">
           <svg className="w-6 h-6" fill="#000">
             <use href={`/sprite.svg?v=1#icon-logo`}></use>
@@ -76,7 +76,7 @@ export default function LoginPage() {
               value={loginData.password}
               onChange={(e) => setLoginData((prev) => ({...prev, password: e.target.value}))}
               type="password"
-              className="w-full text-[#000] px-4 py-3 rounded-[16px] bg-[#e9e5e5] text-sm focus:outline-none focus:ring-2 focus:ring-[#4CAF50]"
+              className="w-full text-[#000] px-4 py-3 rounded-[16px] bg-[#e9e5e5] text-sm focus:outline-none focus:ring-2 focus:ring-[#1565C0]"
               placeholder="********"
             />
           </div>
@@ -87,21 +87,21 @@ export default function LoginPage() {
               e.preventDefault()
               handleLogin()
             }}
-            className="px-8 py-3 rounded-[16px] bg-[#4CAF50] text-white font-semibold text-[16px] shadow-md hover:bg-[#e56d30] transition"
+            className="px-8 py-3 rounded-[16px] bg-[#1565C0] text-white font-semibold text-[16px] shadow-md transition"
           >
-            Увійти
+            Log in
           </button>
         </form>
 
         <div className="flex items-center gap-4 mt-8 justify-center">
           <button
           //  onClick={() => signIn("google", { callbackUrl: "/home" })}
-           className="flex-1 flex items-center justify-center border-none gap-2 py-3 bg-white rounded-[12px] shadow border hover:bg-gray-50 transition">
+           className="flex-1 flex items-center justify-center border-none gap-2 py-3 bg-white rounded-[12px] shadow-lg border hover:bg-gray-50 transition">
             <FcGoogle size={24} /> 
           </button>
           <button
           //  onClick={() => signIn("google", { callbackUrl: "/home" })}
-           className="flex-1 flex items-center justify-center border-none gap-2 py-3 bg-white rounded-[12px] shadow border hover:bg-gray-50 transition">
+           className="flex-1 flex items-center justify-center border-none gap-2 py-3 bg-white rounded-[12px] shadow-lg border hover:bg-gray-50 transition">
             <FaGithub size={24} color="black" /> 
           </button>
         </div>
