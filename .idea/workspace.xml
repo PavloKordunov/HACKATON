@@ -19,13 +19,31 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Record" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -75,6 +93,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -86,6 +107,7 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.hackathon.backend.service.impl" />
+      <recent name="com.hackathon.backend.util" />
       <recent name="com.hackathon.backend.service" />
       <recent name="com.hackathon.backend.repository" />
       <recent name="com.hackathon.backend.dto" />
@@ -107,6 +129,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #73" />
+        <item itemvalue="HTTP Request.generated-requests | #73" />
+        <item itemvalue="HTTP Request.generated-requests | #73" />
         <item itemvalue="HTTP Request.generated-requests | #73" />
       </list>
     </recent_temporary>
@@ -131,6 +156,7 @@
       <workItem from="1745669022750" duration="284000" />
       <workItem from="1745669315536" duration="6136000" />
       <workItem from="1745722671776" duration="851000" />
+
     </task>
     <task id="LOCAL-00001" summary="fix-v1">
       <option name="closed" value="true" />
@@ -164,13 +190,60 @@
       <option name="project" value="LOCAL" />
       <updated>1745676161280</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add sing up &amp; login">
+      <option name="closed" value="true" />
+      <created>1745679076702</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745679076702</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add InvestorController">
+      <option name="closed" value="true" />
+      <created>1745681020587</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745681020587</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add FarmerController">
+      <option name="closed" value="true" />
+      <created>1745684602624</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745684602624</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add GlobalExceptionHandler">
+      <option name="closed" value="true" />
+      <created>1745695217615</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745695217615</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/dev" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -186,6 +259,11 @@
     <MESSAGE value="init commit v1" />
     <MESSAGE value="add Field, Farmer, Investor Entity &amp; implement Field logic" />
     <MESSAGE value="fix Field endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Field endpoints" />
+    <MESSAGE value="add sing up &amp; login" />
+    <MESSAGE value="add InvestorController" />
+    <MESSAGE value="add FarmerController" />
+    <MESSAGE value="add GlobalExceptionHandler" />
+    <MESSAGE value="change java 21 -&gt; 17" />
+    <option name="LAST_COMMIT_MESSAGE" value="change java 21 -&gt; 17" />
   </component>
 </project>
