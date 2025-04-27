@@ -11,6 +11,7 @@ public record FarmerDto(
     String name,
     String email,
     String image,
+    String password,
     List<UUID> fields
 ) {
 }
